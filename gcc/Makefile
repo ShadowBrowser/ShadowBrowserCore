@@ -30,13 +30,13 @@ all:
 	@echo NOTE, It's recomended to only compile to your machines target
 
 windll:
-	$(CC) -shared -o $(OUTFILE).dll -D WINDOWSDLL $(INPUTFILES)
+	$(CC) -shared -o .\bin\$(OUTFILE).dll -D WINDOWSDLL $(INPUTFILES)
 	copy ShadowCore.h .\bin\include\ShadowCore.h
 
 win:
-	$(CC) -c -o $(OUTFILE).o $(INPUTFILES)
+	$(CC) -c -o .\bin\$(OUTFILE).o $(INPUTFILES)
 	copy ShadowCore.h .\bin\include\ShadowCore.h
 
 linux:
-	$(CC) -c -o $(OUTFILE).o $(INPUTFILES)
-	cp ShadowCore.h .\bin\include\ShadowCore.h
+	$(CC) -c -o ./bin$(OUTFILE).o $(INPUTFILES)
+	cp ShadowCore.h ./bin/include/ShadowCore.h

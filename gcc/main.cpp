@@ -1,4 +1,4 @@
-#include "vlib.h"
+#include "ShadowCore.h"
 #include "version.h"
 
 #ifdef _WIN32
@@ -45,4 +45,8 @@ EXPORT void aboutCore() {
 	print("ShadowCore Version "); println(CORE_VERSION);
 	print("Time of Run: "); println(dt);
 	print("Time of Compile: "); print(__DATE__); print(" "); println(__TIME__);
+}
+
+EXPORT std::string coreVersion() {
+	return CORE_VERSION;
 }

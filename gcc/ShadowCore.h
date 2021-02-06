@@ -24,5 +24,6 @@ EXPORT int getSysMemoryUsage(); //Get System Memory Usage
 
 //Micellaneous
 EXPORT void aboutCore(); //Info about ShadowCore
+EXPORT std::string coreVersion();
 
 #endif /* _SHADOWCORE_ */

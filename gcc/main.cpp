@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <stdlib.h>
 
 EXPORT void print(std::string text) {
 	std::cout << text;
@@ -49,4 +50,26 @@ EXPORT void aboutCore() {
 
 EXPORT std::string coreVersion() {
 	return CORE_VERSION;
+}
+
+
+/* Randomizers */
+/* Can be used within ShadowBrowser or by the JavaScript end */
+
+EXPORT int RandomNumber(int seed) {
+	
+	if (seed == -1) {
+		return rand();
+	} else {
+		srand(seed);
+		return rand();
+	}
+}
+
+/* Utils */
+
+EXPORT char* StringToCharArr(std::string inputString) {
+	int stringlength = inputString.length();
+	char stringArr[stringlength + 1];
+	return strcpy(stringArr, inputString.c_str());
 }

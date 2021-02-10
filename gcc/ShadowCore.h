@@ -26,4 +26,10 @@ EXPORT int getSysMemoryUsage(); //Get System Memory Usage
 EXPORT void aboutCore(); //Info about ShadowCore
 EXPORT std::string coreVersion();
 
+//Randomizers
+EXPORT int RandomNumber(int seed = -1); //Set to -1 for no seed 
+
+//Utils
+EXPORT char* StringToCharArr(std::string inputString);
+
 #endif /* _SHADOWCORE_ */

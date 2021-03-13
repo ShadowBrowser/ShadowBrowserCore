@@ -38,5 +38,5 @@ win:
 	copy ShadowCore.h .\bin\include\ShadowCore.h
 
 linux:
-	$(CC) -c -o ./bin$(OUTFILE).o $(INPUTFILES)
+	$(CC) -c -o ./bin/$(OUTFILE).o $(INPUTFILES)
 	cp ShadowCore.h ./bin/include/ShadowCore.h
